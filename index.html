@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 비즈니스 아이디어 생성기 | 혁신적인 사업 아이디어를 빠르게 생성</title>
+    <meta name="description" content="AI 기술을 활용하여 당신의 관심 분야에 맞는 혁신적인 비즈니스 아이디어를 즉시 생성해보세요. 창업과 사업 확장을 위한 완벽한 도구입니다.">
+    <meta name="keywords" content="AI, 비즈니스 아이디어, 창업, 혁신, 사업 아이디어 생성기">
+    <meta name="author" content="Runbuild">
+    <link rel="canonical" href="https://yourdomain.com/ai-business-idea-generator">
+    <meta property="og:title" content="AI 비즈니스 아이디어 생성기 | 혁신적인 사업 아이디어를 빠르게 생성">
+    <meta property="og:description" content="AI 기술을 활용하여 당신의 관심 분야에 맞는 혁신적인 비즈니스 아이디어를 즉시 생성해보세요. 창업과 사업 확장을 위한 완벽한 도구입니다.">
+    <meta property="og:url" content="https://yourdomain.com/ai-business-idea-generator">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/path-to-your-image.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #google_translate_element {
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .goog-te-combo {
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            border: 1px solid #d1d5db;
+            background-color: white;
+            color: #374151;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+        .goog-te-gadget {
+            font-family: 'Poppins', sans-serif !important;
+            font-size: 0.875rem !important;
+            color: #374151 !important;
+        }
+        .goog-te-gadget .goog-te-combo {
+            margin: 4px 0 !important;
+        }
+        .goog-te-gadget span {
+            display: none !important;
+        }
+        .goog-te-gadget > div {
+            display: inline !important;
+        }
+        .goog-te-gadget {
+            color: transparent !important;
+        }
+        .footer {
+            margin-top: auto;
+            padding: 1rem;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 min-h-screen flex flex-col items-center">
+    <header>
+        <nav id="google_translate_element" role="navigation" aria-label="언어 선택"></nav>
+    </header>
+    <main id="app" class="bg-white p-8 rounded-lg shadow-2xl max-w-md w-full text-center">
+        <h1 class="text-3xl font-bold mb-6 text-gray-800">🚀 AI 사업 아이디어 생성기</h1>
+        <form id="interestForm" class="mb-6" aria-label="아이디어 생성 폼">
+            <label for="interestInput" class="sr-only">관심 분야</label>
+            <input type="text" id="interestInput" class="w-full px-4 py-2 rounded-full border-2 border-purple-300 focus:outline-none focus:border-purple-500" placeholder="관심 분야를 입력하세요" required aria-required="true">
+            <button type="submit" class="mt-4 w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 px-4 rounded-full hover:from-purple-600 hover:to-pink-600 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <span id="buttonText">💡 아이디어 생성</span>
+                <span id="loadingSpinner" class="hidden">
+                    <svg class="animate-spin h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span class="sr-only">로딩 중...</span>
+                </span>
+            </button>
+        </form>
+    </main>
+
+    <aside class="a2a_kit a2a_kit_size_32 a2a_default_style" style="margin-top: 20px;" aria-label="공유 옵션">
+        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_mastodon"></a>
+        <a class="a2a_button_email"></a>
+        <a class="a2a_button_sms"></a>
+        <a class="a2a_button_facebook_messenger"></a>
+        <a class="a2a_button_kakao"></a>
+        <a class="a2a_button_line"></a>
+        <a class="a2a_button_x"></a>
+    </aside>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+    <footer class="footer w-full">
+        <p>© 2024 made by Runbuild</p>
+    </footer>
+
+    <script>
+        const functionUrl = 'https://us-central1-richidea-baf0b.cloudfunctions.net/generateIdeas';
+
+        document.getElementById('interestForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const interestInput = document.getElementById('interestInput');
+            const interest = interestInput.value.trim();
+            if (interest) {
+                generateIdeasForInterest(interest);
+                interestInput.value = '';
+                interestInput.focus();
+            }
+        });
+
+        async function generateIdeasForInterest(interest) {
+            setLoading(true);
+
+            try {
+                const response = await fetch(functionUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ interest: interest })
+                });
+
+                if (!response.ok) {
+                    throw new Error('API 요청 실패');
+                }
+
+                const data = await response.json();
+
+                if (!data.success) {
+                    throw new Error(data.error || 'Unknown error occurred');
+                }
+
+                let resultHTML = '<ol class="text-left space-y-4">';
+                data.ideas.forEach(idea => {
+                    resultHTML += `<li class="text-lg">${idea}</li>`;
+                });
+                resultHTML += '</ol>';
+
+                Swal.fire({
+                    title: `<span class="text-2xl font-bold">💼 ${interest} 관련 비즈니스 아이디어</span>`,
+                    html: resultHTML,
+                    icon: 'success',
+                    confirmButtonText: '닫기',
+                    confirmButtonColor: '#8B5CF6',
+                    customClass: {
+                        container: 'font-sans',
+                        title: 'text-purple-600',
+                        htmlContainer: 'text-gray-700'
+                    }
+                });
+            } catch (error) {
+                console.error('Error:', error);
+                Swal.fire({
+                    title: '오류 발생',
+                    text: '아이디어 생성 중 문제가 발생했습니다. 다시 시도해주세요.',
+                    icon: 'error',
+                    confirmButtonText: '확인',
+                    confirmButtonColor: '#EF4444'
+                });
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        function setLoading(isLoading) {
+            const buttonText = document.getElementById('buttonText');
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const submitButton = document.querySelector('button[type="submit"]');
+            
+            if (isLoading) {
+                buttonText.classList.add('hidden');
+                loadingSpinner.classList.remove('hidden');
+                submitButton.disabled = true;
+                submitButton.setAttribute('aria-busy', 'true');
+            } else {
+                buttonText.classList.remove('hidden');
+                loadingSpinner.classList.add('hidden');
+                submitButton.disabled = false;
+                submitButton.removeAttribute('aria-busy');
+            }
+        }
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ko',  
+            }, 'google_translate_element');
+        }
+    </script>
+</body>
+</html>
